@@ -1,7 +1,4 @@
-
-General CS Topics
-
-
+# General CS Topics
 
 * Http Headers
     * CSP content security policy
