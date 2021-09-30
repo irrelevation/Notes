@@ -81,6 +81,14 @@
         * how to make it fast
         * 
 * Microservices architecture
+* VMs
+    * Hypervisors
+        * Type 1 (aka Bare Metal Hypervisor)
+            * Installed directly on the hardware
+            * for servers
+        * Type 2 (hosted Hypervisor)
+            * Borrows resources from the Host OS
+            * For personal Computers
 
 Python
 
