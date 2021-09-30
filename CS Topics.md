@@ -1,7 +1,6 @@
+# CS Topics
 
-General CS Topics
-
-
+## General
 
 * Http Headers
     * CSP content security policy
@@ -28,7 +27,6 @@ General CS Topics
 * CSP: Communication Sequential Processes
 * Shared-nothing architecture
 * ACID: Atomicity, Consistency, Isolation, Durability
-* Paxos Algorithm (Consensus)
 * Multiversion Concurrency Control
 * REST APIs
 * gRPC: Google Remote Procedural Call (grpc.io)
@@ -85,9 +83,12 @@ General CS Topics
         * 
 * Microservices architecture
 
-Python
+## Algorithms
 
+- T Digest
+- Paxos Algorithm (Consensus)
 
+## Python
 
 1. Learn the language basics, such as data storage, keywords, decision making, and looping instructions.
 2. Learn the language used to perform specific tasks.
@@ -163,9 +164,7 @@ Python
         * tkinter (a little older than pyQT5, less capabilities but easier to use)
     * pygame (lightweight game engine, not too powerfull but nice for getting started)
 
-Javascript / Typescript
-
-
+## Javascript / Typescript
 
 * DOM Tree
 * Meteor
@@ -173,9 +172,7 @@ Javascript / Typescript
 * Webpack
 * see everything in Python
 
-Dev-Ops
-
-
+## Dev-Ops
 
 * NginX
 * GraphQL
@@ -184,9 +181,7 @@ Dev-Ops
 * GCP, AWS
 * Continuous Integration (github actions), Continuous Delivery
 
-Databases
-
-
+## Databases
 
 * MySQL
 * !!! PostgresQL (Relational)
@@ -202,9 +197,7 @@ Databases
     * Cassandra (wide, in memory)
     * Memcache
 
-Audio
-
-
+## Audio
 
 * real-time programming
 * fast & efficient DSP
@@ -223,9 +216,7 @@ Audio
 * Game Audio
     * Fmod
 
-Languages (Focus on a few, don’t spread too wide)
-
-
+## Languages (Focus on a few, don’t spread too wide)
 
 * Python (Backend, APIs, ML, Dataengineering)
 * NodeJS (Backend, APIs)
@@ -239,9 +230,7 @@ Languages (Focus on a few, don’t spread too wide)
 * Typescript
 * Rust
 
-Misc
-
-
+## Misc
 
 * 101 Graphic Design: Photoshop, Vector Graphics
 * learn fast typing without looking at the keyboard
@@ -261,15 +250,14 @@ Misc
     * helps communication if you re working in a team
     * functions as a contract for teams
 
-Projects
-
-
+## Projects
 
 1. With Design Patterns, Architectural Patterns
 2. Professional UI
 3. Database, CRUD functionality
 4. Security
 5. Handle a real business problem
+
 * A MERN stack Project (MongoDB, Express, React, Node)
 * Full Stack Project Planning: [https://dev.to/thecodepixi/fullstack-project-planning-3jml](https://dev.to/thecodepixi/fullstack-project-planning-3jml)
 * a list of python project ideas: [https://www.theinsaneapp.com/2021/06/list-of-python-projects-with-source-code-and-tutorials.html](https://www.theinsaneapp.com/2021/06/list-of-python-projects-with-source-code-and-tutorials.html)
