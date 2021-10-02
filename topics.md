@@ -30,6 +30,7 @@
 * REST APIs
 * gRPC: Google Remote Procedural Call (grpc.io)
 * GIT
+    * 
 * Aggregation vs Composition
 * OSI Model, TCP IP
 * Google Cloud Functions
@@ -86,7 +87,7 @@
         * Type 1 (aka Bare Metal Hypervisor)
             * Installed directly on the hardware
             * for servers
-        * Type 2 (hosted Hypervisor)
+        * Type 2 (hosted Hyperv)
             * Borrows resources from the Host OS
             * For personal Computers
 
