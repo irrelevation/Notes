@@ -10,10 +10,10 @@
 | `git reset`    | File-level   | Unstage a file                                               |
 | `git checkout` | Commit-level | Switch between branches or inspect old snapshots             |
 | `git checkout` | File-level   | Discard changes in the working directory                     |
-| `git revert`   | Commit-level | Undo commits in a public branch                              |
-| `git revert`   | File-level   | (N/A)                                                        |
-| `git restore` |  Commit-level | (N/A) |
+| `git revert`   | Commit-level | Undo commits in a public branch |
 | `git restore` | File-level | Restore file(s) like with `git checkout`on File-level |
+| `git commit --amend`| Commit-level | Replace the most recent commit |
+| `git rebase -i`| Commit-level | Change past commits |
 
 ---
 
@@ -156,16 +156,76 @@ Merge Conflicts don't allways have to be resolved. They can be aborted via `git 
 ## Merge vs. Rebase
 
 ### Merge
-
 Merging is based on three commits. The common ancestor (where the two branches divert from), the latest commit on the current branch and the latest commit on the branch to be merged. If the current branch did not change after the other branch diverged, git will do a "fast forward commit" meaning both branches share a common history.
-
 Usually branches do evolve differently, in this case a merge commit is commited automatically to the current branch.
 
 ### Rebase
-
 Will base the branch to be integrated on the current branch, whereby rewriting the commit history. This makes for a cleaner commit history with less forks in the road. But be careful - this strategy can lead to problems if applied to commits that have been made public (pushed to a shared repository). Only use rebasing to clean up your local commit history. The rebase process in detail:
 
 1. git removes all commits that happened after the common ancestor commit from the branch we want to rebase.
 2. git applies the new commits from the current. Now both branches temporarily look exactly the same.
 3. git reapplies the commits from the branch we want to rebase.
 
+### Interactive Rebase
+Use interactive rebase to optimise & clean up your commit history. As with normal rebasing be careful not to interactively rebase branches that have been made public. You can:
+
+- change a commit's message
+- delete commits
+- reorder commits
+- combine multiple commits into one
+- edit/split an existing commit into multiple new ones
+
+
+---
+
+
+
+## Cherry-Pick
+
+Cherry-pick is used to select individual commits to be integrated. It can be used to:
+
+- move a commit to a different branch
+
+---
+
+
+
+## The Reflog
+
+The reflog records when the tip of branches and other references were updated. The `git reflog`command can be used to:
+
+- restore deleted commits
+- restore deleted branches
+
+---
+
+
+
+## Submodules
+
+The submodules command can be used to store another repositories in the directory of your git repository without adding them to your repository. The repository will only store its submodule's configurations. If you clone a repository that contains submodules the submodules will not be copied to your working directory. In order to change that you need to set an extra flag. `git clone --recurse-submodules` will clone the repository including submodules. If you forgot to set the flag you can use `git submodules update --init --recursive` to clone the submodules.
+
+Submodules don't get checked out on a branch but a specific revision.
+
+---
+
+
+
+## Searching & Finding
+
+| Search by | Command |
+| --- | --- |
+|  date | `git log --before=<date>` `git log --after=<date>` |
+| message | `git log --grep=<pattern>`|
+| author | `git log --author=<pattern>`|
+| file | `git log -- <filename>` |
+| branch |  `git log <branch1>..<branch2>` (will show all files that are in branchB but not in branchA) |
+
+---
+
+
+
+## Sources
+
+[Atlassian](https://www.atlassian.com/git)
+[The Advanced Git Kit](https://www.git-tower.com/learn/git/advanced-git-kit/)
