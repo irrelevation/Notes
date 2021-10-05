@@ -219,7 +219,7 @@ Submodules don't get checked out on a branch but a specific revision.
 | message | `git log --grep=<pattern>`|
 | author | `git log --author=<pattern>`|
 | file | `git log -- <filename>` |
-| branch |  `git log <branch1>..<branch2>` (will show all files that are in branchB but not in branchA) |
+| branch | `git log <branch1>..<branch2>` (will show all files that are in branch1 but not in branch2) |
 
 ---
 
