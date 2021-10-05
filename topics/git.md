@@ -229,3 +229,4 @@ Submodules don't get checked out on a branch but a specific revision.
 
 [Atlassian](https://www.atlassian.com/git)
 [The Advanced Git Kit](https://www.git-tower.com/learn/git/advanced-git-kit/)
+[Git Homepage](https://git-scm.com/)
