@@ -30,8 +30,6 @@
 - Multiversion Concurrency Control
 - REST APIs
 - gRPC: Google Remote Procedural Call (grpc.io)
-- GIT
-  -
 - Aggregation vs Composition
 - OSI Model, TCP IP
 - Google Cloud Functions
@@ -190,6 +188,16 @@
 - Kubernetes, Skaffold, Lens
 - GCP, AWS
 - Continuous Integration (github actions), Continuous Delivery
+  1. run tests
+  2. package app
+  3. build docker image
+  4. push to artifact repository
+  5. deploy to server
+- Monitoring
+  - Prometheus
+- Infrastructure as Code
+  - infrastructure provisioning: Terraform
+  - configuration management: Ansible
 
 ## Databases
 
