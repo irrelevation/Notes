@@ -15,6 +15,11 @@
 | `git commit --amend`| Commit-level | Replace the most recent commit |
 | `git rebase -i`| Commit-level | Change past commits |
 
+If you ever need to remove something not only from your commit, but also from the entire history of the repo (e.g. an access token you accidentally commited) you can use `git filter-repo`. This is not a git core functionality but a commandline tool you need to install (e.g. via `brew install git-filter-repo`. Then you can purge a file from your repo with `git filter-repo --invert-paths --path PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA`.
+
+further infos: [Removing sensitive data from a repository
+](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+
 ---
 
 
