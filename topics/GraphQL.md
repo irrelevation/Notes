@@ -1,8 +1,8 @@
 # GraphQL
 
-## Types
+## Types & Scalars
 
-There are 6 basic types:
+Basic types are called scalars. These are the most important basic types:
 
 - String
 - Int
