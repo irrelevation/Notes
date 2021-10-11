@@ -180,6 +180,13 @@
 - Webpack
 - see everything in Python
 
+## Browsers
+
+- [The Console API](https://developer.mozilla.org/en-US/docs/Web/API/console)
+  - styling console output with %c
+- DevTools
+  - [Waterfall](https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall)
+
 ## Dev-Ops
 
 - NginX
@@ -202,8 +209,8 @@
 ## Databases
 
 - MySQL
-- !!! PostgresQL (Relational)
-- !!! SQLite
+- PostgresQL (Relational)
+- SQLite
 - MongoDB, Dynamo DB, Firebase Firestare (Document)
 - Neo4j (graph)
 - Elastic Search, Solr, MeiliSearch (search engine)
@@ -238,7 +245,7 @@
 
 - Python (Backend, APIs, ML, Dataengineering)
 - NodeJS (Backend, APIs)
-- !!!SQL (DBs)
+- SQL (DBs)
 - XML
 - Javascript, HTML, CSS (Frontend)
 - Kotlin / Java (Android)
