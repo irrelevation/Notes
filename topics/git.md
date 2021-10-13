@@ -1,19 +1,19 @@
 # git
----
 
+---
 
 ## Undoing things
 
-| Command        | Scope        | Common use cases                                             |
-| -------------- | ------------ | ------------------------------------------------------------ |
-| `git reset`    | Commit-level | Discard commits in a private branch or throw away uncommited changes |
-| `git reset`    | File-level   | Unstage a file                                               |
-| `git checkout` | Commit-level | Switch between branches or inspect old snapshots             |
-| `git checkout` | File-level   | Discard changes in the working directory                     |
-| `git revert`   | Commit-level | Undo commits in a public branch |
-| `git restore` | File-level | Restore file(s) like with `git checkout`on File-level |
-| `git commit --amend`| Commit-level | Replace the most recent commit |
-| `git rebase -i`| Commit-level | Change past commits |
+| Command              | Scope        | Common use cases                                                     |
+| -------------------- | ------------ | -------------------------------------------------------------------- |
+| `git reset`          | Commit-level | Discard commits in a private branch or throw away uncommited changes |
+| `git reset`          | File-level   | Unstage a file                                                       |
+| `git checkout`       | Commit-level | Switch between branches or inspect old snapshots                     |
+| `git checkout`       | File-level   | Discard changes in the working directory                             |
+| `git revert`         | Commit-level | Undo commits in a public branch                                      |
+| `git restore`        | File-level   | Restore file(s) like with `git checkout`on File-level                |
+| `git commit --amend` | Commit-level | Replace the most recent commit                                       |
+| `git rebase -i`      | Commit-level | Change past commits                                                  |
 
 If you ever need to remove something not only from your commit, but also from the entire history of the repo (e.g. an access token you accidentally commited) you can use `git filter-repo`. This is not a git core functionality but a commandline tool you need to install (e.g. via `brew install git-filter-repo`. Then you can purge a file from your repo with `git filter-repo --invert-paths --path PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA`.
 
@@ -21,8 +21,6 @@ further infos: [Removing sensitive data from a repository
 ](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 
 ---
-
-
 
 ## Commits
 
@@ -33,8 +31,6 @@ Create commits that only include changes from a **single** topic.
 Craft better commit messages by adding a message body to your message subject. Type `git commit`and in the editor add a blank line after the subject. The following block will automatically be interpreted as the message body.
 
 ---
-
-
 
 ## Branching
 
@@ -55,8 +51,6 @@ Branching strategies depend on the way you integrate changes & structure your re
 - more branches
 - different branches fulfill different roles
 
-
-
 ### Long-Running vs. Short-Lived Branches
 
 #### Long-Running Branches
@@ -73,8 +67,6 @@ Branching strategies depend on the way you integrate changes & structure your re
 - based on a long running branch
 - will be deleted after integration
 
-
-
 ### Example Branching Strategies
 
 #### GitHub Flow
@@ -87,7 +79,7 @@ Branching strategies depend on the way you integrate changes & structure your re
 
 - more structure, more rules
 
-- Long-running branches: 
+- Long-running branches:
 
   - "main" - reflects production state, base for dev-branch
   - "develop" - base for release & feature branches, merges features back into it once they are done
@@ -111,8 +103,6 @@ Branching strategies depend on the way you integrate changes & structure your re
 
 ---
 
-
-
 ## Pull Requests
 
 - Are not a feature of git. They are provided by your git hosting platform and therefore can differ slightly
@@ -121,8 +111,6 @@ Branching strategies depend on the way you integrate changes & structure your re
 - are based on branches, not commits
 
 ---
-
-
 
 ## Merge Conflicts
 
@@ -134,8 +122,6 @@ git config --global mergetool.<tool>.cmd <command>
 # if you can't use your editors exit code to determine wether the merge conflict got resolved, add the following line:
 git config --global mergetool.<tool>.trustExitCode false
 ```
-
-
 
 Visual Studio Code Example:
 
@@ -150,21 +136,19 @@ git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 git config --global core.editor vscode
 ```
 
-
-
 Merge Conflicts don't allways have to be resolved. They can be aborted via `git merge --abort`or `git rebase abort`.
 
 ---
 
-
-
 ## Merge vs. Rebase
 
 ### Merge
+
 Merging is based on three commits. The common ancestor (where the two branches divert from), the latest commit on the current branch and the latest commit on the branch to be merged. If the current branch did not change after the other branch diverged, git will do a "fast forward commit" meaning both branches share a common history.
 Usually branches do evolve differently, in this case a merge commit is commited automatically to the current branch.
 
 ### Rebase
+
 Will base the branch to be integrated on the current branch, whereby rewriting the commit history. This makes for a cleaner commit history with less forks in the road. But be careful - this strategy can lead to problems if applied to commits that have been made public (pushed to a shared repository). Only use rebasing to clean up your local commit history. The rebase process in detail:
 
 1. git removes all commits that happened after the common ancestor commit from the branch we want to rebase.
@@ -172,6 +156,7 @@ Will base the branch to be integrated on the current branch, whereby rewriting t
 3. git reapplies the commits from the branch we want to rebase.
 
 ### Interactive Rebase
+
 Use interactive rebase to optimise & clean up your commit history. As with normal rebasing be careful not to interactively rebase branches that have been made public. You can:
 
 - change a commit's message
@@ -180,10 +165,7 @@ Use interactive rebase to optimise & clean up your commit history. As with norma
 - combine multiple commits into one
 - edit/split an existing commit into multiple new ones
 
-
 ---
-
-
 
 ## Cherry-Pick
 
@@ -192,8 +174,6 @@ Cherry-pick is used to select individual commits to be integrated. It can be use
 - move a commit to a different branch
 
 ---
-
-
 
 ## The Reflog
 
@@ -204,8 +184,6 @@ The reflog records when the tip of branches and other references were updated. T
 
 ---
 
-
-
 ## Submodules
 
 The submodules command can be used to store another repositories in the directory of your git repository without adding them to your repository. The repository will only store its submodule's configurations. If you clone a repository that contains submodules the submodules will not be copied to your working directory. In order to change that you need to set an extra flag. `git clone --recurse-submodules` will clone the repository including submodules. If you forgot to set the flag you can use `git submodules update --init --recursive` to clone the submodules.
@@ -214,22 +192,39 @@ Submodules don't get checked out on a branch but a specific revision.
 
 ---
 
+## Log
 
+Use `git log` to show your commit history. Add `--one-line` for more compact output and `--graph` for a graph view.
 
 ## Searching & Finding
 
-| Search by | Command |
-| --- | --- |
-|  date | `git log --before=<date>` `git log --after=<date>` |
-| message | `git log --grep=<pattern>`|
-| author | `git log --author=<pattern>`|
-| file | `git log -- <filename>` |
-| branch | `git log <branch1>..<branch2>` (will show all files that are in branch1 but not in branch2) |
+| Search by | Command                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------- |
+| date      | `git log --before=<date>` `git log --after=<date>`                                          |
+| message   | `git log --grep=<pattern>`                                                                  |
+| author    | `git log --author=<pattern>`                                                                |
+| file      | `git log -- <filename>`                                                                     |
+| branch    | `git log <branch1>..<branch2>` (will show all files that are in branch1 but not in branch2) |
 
 ---
 
+## Finding Errors
 
+To determine which commit causes a certain bug or error use `git bisect`. It will let you manually perform a binary search through your commit history to find the bug.
 
+---
+
+## Stashing
+
+`git stash` will remove the current changes from the working directory and stash them for later use (except untracked files).
+`git stash -u` like `git stash` but will include unstashed files.
+`git stash -p` will let you do a partial stash.
+`git stash save <your-label-here>` lets you give a name to the stashed files for easy retrieval.
+`git stash apply` will apply the latest stash.
+`git stash pop` will apply the latest stash and drop it from the stash stack.
+
+---
+ 
 ## Sources
 
 [Atlassian](https://www.atlassian.com/git)
