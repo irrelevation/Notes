@@ -89,6 +89,10 @@
     - Type 2 (hosted Hyperv)
       - Borrows resources from the Host OS
       - For personal Computers
+- Duck Typing
+- Code smells (explain *why* and *in which context* they are considered codesmells
+  - Data Clumps
+  - Type Checking
 
 ## Algorithms
 
