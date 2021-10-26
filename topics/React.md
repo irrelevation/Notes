@@ -14,8 +14,8 @@ If you need to synchronize between components, make the closest common ancestor 
 
 ## Side effects
 
-To perform side effects you can use `useEffect(callBack)`.
-By default `useEffect(cb)` runs after the initial render _and_ after each update.
+To perform side effects you can use `useEffect`.
+By default `useEffect` runs after the initial render _and_ after each update.
 
 ## Events
 
@@ -39,6 +39,14 @@ There are different stages in the lifecycle of a component:
 - **Mounting** - when it gets created and flushed into the DOM.
 - **Update** - when the component gets updates
 - **Unmounting** - when the component gets removed from the DOM
+
+## Hooks
+
+Only call Hooks at the **top level** of React _function_ components or in your own custom Hooks.
+
+## Context
+
+Use context to share data that can be considered "global" for a tree of React components (eg. theme, authenticated user, language, cache)
 
 ## Reducers
 
