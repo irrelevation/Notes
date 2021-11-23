@@ -8,4 +8,4 @@ There are lots of similarities between visual and accoustic design.
 - Creating space: making room in the frequency spectrum.
 - Creating hierarchy: through contrast, loudness, colour
 - blending vs contrast
-- subtract to emphasize (EQ)
+- subtract to emphasize (EQ, loudness, reverb)
