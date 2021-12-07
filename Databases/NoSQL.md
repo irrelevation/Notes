@@ -1,5 +1,12 @@
 # NoSQL
 
+## Embedding
+
+| Pro | Con |
+| --- | --- |
+| First Item | Second Item |
+
+
 ## Firebase
 
 Keep your collections **large** and your documents **small**.
@@ -22,6 +29,6 @@ Pick Cloud Firestore otherwise
 #### Ordering Functions
 
 1. `orderByKey()`
-2. `orderByCHild('childProperty')`
+2. `orderByChild('childProperty')`
 3. `orderByValue()`
 4. `orderByPriority()`
