@@ -8,6 +8,8 @@
 3. Arrays should *not* grow without bound. Use reverse referencing instead.
 4. Model your data according to your application's access pattern.
 
+[Further reading](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1)
+
 
 ### Embedding
 
