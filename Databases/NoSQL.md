@@ -41,7 +41,9 @@
 | Many to Many | Referencing (Many <--> Many) |
 
 
-## [Design Patterns](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+## Design Patterns
+
+[Further reading](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
 
 
 ### Outlier Pattern
