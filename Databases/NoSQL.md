@@ -1,6 +1,8 @@
 # NoSQL
 
-## Embedding
+## Embedding vs. Referencing
+
+### Embedding
 
 | Pro | Con |
 | --- | --- |
@@ -8,7 +10,7 @@
 | Avoids expensive JOINs or $lookups | Document size limits (16mb @ mongoDB) |
 | Update all Data with a single atomic operation |
 
-## Referencing
+### Referencing
 
 | Pro | Con |
 | --- | --- |
@@ -16,6 +18,15 @@
 | Less likely to exceed document size limits |
 | No duplication of data |
 | Infrequently accessed data not accessed on every query |
+
+## Relationships
+
+
+| Relationship | Implementation |
+| --- | --- |
+| One to One | Key-Value pair |
+| One to Few | Embedded data (array or object) |
+
 
 ## Firebase
 
