@@ -1,6 +1,13 @@
 # NoSQL
 
+
 ## Embedding vs. Referencing
+
+1. Favor embedding over referencing (to avoid JOINs & $lookups) unless you have a compelling reason not to.
+2. Needing to access data on its own *is* a compelling reason for referencing.
+3. Arrays should *not* grow without bound. Use reverse referencing instead.
+4. Model your data according to your application's access pattern.
+
 
 ### Embedding
 
@@ -9,6 +16,7 @@
 | Retrieve all data with a single query | Large documents === more overhead |
 | Avoids expensive JOINs or $lookups | Document size limits (16mb @ mongoDB) |
 | Update all Data with a single atomic operation |
+
 
 ### Referencing
 
@@ -19,18 +27,30 @@
 | No duplication of data |
 | Infrequently accessed data not accessed on every query |
 
-## Relationships
 
+## Relationships
 
 | Relationship | Implementation |
 | --- | --- |
 | One to One | Key-Value pair |
-| One to Few | Embedded data (array or object) |
+| One to Few | Embedding |
+| One to Many | Referencing (One --> Many) |
+| One to too Many | Referencing (One <-- Many) |
+| Many to Many | Referencing (Many <--> Many) |
+
+
+## [Design Patterns](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+
+
+### Outlier Pattern
+
+If you have a One to too Many relationship that needs to be stored as **One --> Too Many** create overflow Documents (use the same id with an incrementing postfix). Indicate in your original and overflow documents whether there are extra entries (via some boolean key-value pair).
 
 
 ## Firebase
 
 Keep your collections **large** and your documents **small**.
+
 
 ### Cloud FIrestore vs. Realtime DB
 
@@ -41,11 +61,13 @@ Pick Realtime DB if:
 
 Pick Cloud Firestore otherwise
 
+
 ### Querying
 
 1. Create a reference to the parent key.
 2. Use an Ordering function. (optional)
 3. Use a querying function. (optional).
+
 
 #### Ordering Functions
 
