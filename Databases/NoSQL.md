@@ -3,9 +3,19 @@
 ## Embedding
 
 | Pro | Con |
-| --- | --- |
-| First Item | Second Item |
+| --- | --- |
+| Retrieve all data with a single query | Large documents === more overhead |
+| Avoids expensive JOINs or $lookups | Document size limits (16mb @ mongoDB) |
+| Update all Data with a single atomic operation |
 
+## Referencing
+
+| Pro | Con |
+| --- | --- |
+| Smaller documents | More queries or $lookups |
+| Less likely to exceed document size limits |
+| No duplication of data |
+| Infrequently accessed data not accessed on every query |
 
 ## Firebase
 
