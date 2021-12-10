@@ -34,3 +34,6 @@ A target can have multiple event listeners and they execute in the order they we
 | `EventTarget.removeEventListener(type, callback)`        | Remove the callback (passed by reference)                    |
 
 You can delegate eventhandling by adding an event listener to a parent element (document for global event handling) and checking for the target in the callback function with `event.target.matches(<CSS Selector>)`.
+
+
+## Event Loop
