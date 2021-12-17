@@ -15,7 +15,7 @@ Dynamix Programming = Recursion + Memoization
 ## Bottom-Up Solutions - non rekursive transformations
 1. Base Case
 2. Loop over Topological Order
-  2.1. Relate
+  1. Relate 
 3. return Original Problem
 
 ## Tips & Tricks
