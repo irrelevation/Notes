@@ -2,7 +2,7 @@
 The term "Dynamic Programming" was coined by Richard Bellmann in the 1950s. Its etymologie has political reasons as described in Bellmann's biography "Eye of the hurricane: An autobiography".
 
 ## TL;DR
-Dynamix Programming = Recursion + Memoization
+Dynamix Programming = Recursion + Memoization = local brut force
 
 ## SORTBT - A recipe for recursive algorithms
 1. **S**ubproblems
