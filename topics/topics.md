@@ -191,7 +191,7 @@
 - DevTools
   - [Waterfall](https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall)
 
-## Dev-Ops
+## DevOps
 
 - NginX
 - GraphQL
