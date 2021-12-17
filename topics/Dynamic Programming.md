@@ -12,6 +12,12 @@ Dynamix Programming = Recursion + Memoization
 5. **B**ase Case
 6. **T**ime Complexity Analysis
 
+## Bottom-Up Solutions - non rekursive transformations
+1. Base Case
+2. Loop over Topological Order
+3. Relate
+4. return Original Problem
+
 ## Tips & Tricks
 Problems regarding a sequence `X` can often be split into subproblems of
 1. Suffixes X(i;) with |Suffixes| = O(n)
