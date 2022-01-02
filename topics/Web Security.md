@@ -17,3 +17,6 @@ JavaScript executing in the browser sandbox is permitted to do the following act
 - Write new entries to the browser history and go backward and forward in history.
 - Ask for the user’s location.
 - Ask permission to send desktop notifications.
+
+## Further Reading
+[Web Security for Developers](https://nostarch.com/websecurity)
