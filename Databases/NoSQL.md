@@ -61,11 +61,14 @@ Duplicate some but not all of the data you are querying for to avoid expensive $
 
 ### Massive arrays
 
-| Problems | Solutions |
-| --- | --- |
-| bad index performance | Embed the other way around |
-| can exceed document size limit (16MB in MongoDB) | Reference instead of Embedding |
-| | Use Extended Reference Pattern |
+#### Problems
+- bad index performance
+- can exceed document size limit (16MB in MongoDB)
+
+Solutions
+- embed the other way around
+- use reference instead of embedding
+- use [Extended Reference Pattern]
 
 
 ### Massive number of collections
