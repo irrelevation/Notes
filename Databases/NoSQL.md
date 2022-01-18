@@ -77,6 +77,7 @@ Thou shalt not exceed 10,000 collections (per replica set).
 
 #### Problems
 - empty and unused indexes drain resources
+- decreased performance
 
 #### Solutions
 - remove empty collections
@@ -84,7 +85,24 @@ Thou shalt not exceed 10,000 collections (per replica set).
 
 ### Unnecessary indexes
 
+Though shalt not exceed 50 indexes per collection.
+
+#### Problems
+- decreases read performance (wiredtiger will open all collection and index files on startup)
+- decreases write performance
+- take up space
+
+#### Solutions
+- drop rarely used indexes
+- drop redundant indexes (eg. covered by compound index)
+
 ### Bloated documents
+
+Thou shalt keep thy documents small. Wiredtiger (the MongoDB storage engine) caches indexes and frequently used documents.
+If your documents are too big, they wont all fit in the cache and slow disk access is necessary. Wiredtiger's `cache size = max((totalRAM - 1GB) * 0.5, 256MB)`.
+
+#### Problems
+- slow queries: 
 
 ### Case insensitive queries without case insensitive indexes
 
