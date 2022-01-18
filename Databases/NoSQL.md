@@ -56,6 +56,9 @@ If you have a One to too Many relationship that needs to be stored as **One --> 
 
 ### Massive arrays
 
+- index performance decreases with increasing array size 
+- can exceed document size limit (16MB in MongoDB)
+
 ### Massive number of collections
 
 ### Unnecessary indexes
