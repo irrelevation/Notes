@@ -68,7 +68,7 @@ Duplicate some but not all of the data you are querying for to avoid expensive $
 Solutions
 - embed the other way around
 - use reference instead of embedding
-- use [Extended Reference Pattern]
+- use [Extended Reference Pattern](#Extended-Reference-Pattern)
 
 
 ### Massive number of collections
