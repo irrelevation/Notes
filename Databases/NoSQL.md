@@ -59,6 +59,13 @@ Duplicate some but not all of the data you are querying for to avoid expensive $
 
 ### Separating data that is accessed together
 
+#### Problems
+- $lookups are slow and resource-intensive
+
+#### Solutions
+- embedding data
+- partially embedding data
+
 ### Massive arrays
 
 #### Problems
@@ -70,9 +77,7 @@ Duplicate some but not all of the data you are querying for to avoid expensive $
 - use reference instead of embedding
 - use [Extended Reference Pattern](#Extended-Reference-Pattern)
 
-
 ### Massive number of collections
-
 Thou shalt not exceed 10,000 collections (per replica set).
 
 #### Problems
@@ -104,7 +109,6 @@ If your documents are too big, they wont all fit in the cache and slow disk acce
 const CACHE_SIZE = MATH.max((totalRAM - 1GB) * 0.5, 256MB);
 ```
 
-
 #### Problems
 - slow queries
 
@@ -114,7 +118,6 @@ const CACHE_SIZE = MATH.max((totalRAM - 1GB) * 0.5, 256MB);
   - slim down your frequently accessed documents
 
 ### Case insensitive queries without case insensitive indexes
-
 
 #### Problems
 - slow (eg. $regex queries)
