@@ -65,13 +65,22 @@ Duplicate some but not all of the data you are querying for to avoid expensive $
 - bad index performance
 - can exceed document size limit (16MB in MongoDB)
 
-Solutions
+#### Solutions
 - embed the other way around
 - use reference instead of embedding
 - use [Extended Reference Pattern](#Extended-Reference-Pattern)
 
 
 ### Massive number of collections
+
+Thou shalt not exceed 10,000 collections (per replica set).
+
+#### Problems
+- empty and unused indexes drain resources
+
+#### Solutions
+- remove empty collections
+- $merge collections whose size is mostly indexes into other collections
 
 ### Unnecessary indexes
 
