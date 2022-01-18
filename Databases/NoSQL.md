@@ -99,16 +99,30 @@ Though shalt not exceed 50 indexes per collection.
 ### Bloated documents
 
 Thou shalt keep thy documents small. Wiredtiger (the MongoDB storage engine) caches indexes and frequently used documents.
-If your documents are too big, they wont all fit in the cache and slow disk access is necessary. Wiredtiger's
+If your documents are too big, they wont all fit in the cache and slow disk access is necessary. Wiredtiger's cache is 
 ```javascript
-cache size = max((totalRAM - 1GB) * 0.5, 256MB)
+const CACHE_SIZE = MATH.max((totalRAM - 1GB) * 0.5, 256MB);
 ```
 
 
 #### Problems
-- slow queries: 
+- slow queries
+
+#### Solutions
+- Make sure your working sert fits in your cache
+  - get more RAM
+  - slim down your frequently accessed documents
 
 ### Case insensitive queries without case insensitive indexes
+
+
+#### Problems
+- slow (eg. $regex queries)
+
+#### Solutions
+- Create a case insensitive index
+  - Add an index with a **collation** of strength 1 or 2. Match that collation strength in your query.
+  - Create a collection with a default collation strength of 1 or 2. All indexes and queries in that collection will automatically be case insensitive.
 
 ## Firebase
 
