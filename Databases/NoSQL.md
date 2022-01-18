@@ -50,13 +50,26 @@
 
 If you have a One to too Many relationship that needs to be stored as **One --> Too Many** create overflow Documents (use the same id with an incrementing postfix). Indicate in your original and overflow documents whether there are extra entries (via some boolean key-value pair).
 
+## Anti Patterns (MongoDB)
+
+### Separating data that is accessed together
+
+### Massive arrays
+
+### Massive number of collections
+
+### Unnecessary indexes
+
+### Bloated documents
+
+### Case insensitive queries without case insensitive indexes
 
 ## Firebase
 
 Keep your collections **large** and your documents **small**.
 
 
-### Cloud FIrestore vs. Realtime DB
+### Cloud Firestore vs. Realtime DB
 
 Pick Realtime DB if:
 
@@ -79,3 +92,7 @@ Pick Cloud Firestore otherwise
 2. `orderByChild('childProperty')`
 3. `orderByValue()`
 4. `orderByPriority()`
+
+## References
+
+- [Schema Design Anti-Patterns](https://www.youtube.com/watch?v=8CZs-0it9r4)
