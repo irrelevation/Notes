@@ -50,14 +50,23 @@
 
 If you have a One to too Many relationship that needs to be stored as **One --> Too Many** create overflow Documents (use the same id with an incrementing postfix). Indicate in your original and overflow documents whether there are extra entries (via some boolean key-value pair).
 
+### Extended Reference Pattern
+
+Duplicate some but not all of the data you are querying for to avoid expensive $lookups. Only duplicate the part that is frequently accessed together.
+
+
 ## Anti Patterns (MongoDB)
 
 ### Separating data that is accessed together
 
 ### Massive arrays
 
-- index performance decreases with increasing array size 
-- can exceed document size limit (16MB in MongoDB)
+| Problems | Solutions |
+| --- | --- |
+| bad index performance | Embed the other way around |
+| can exceed document size limit (16MB in MongoDB) | Reference instead of Embedding |
+| | Use Extended Reference Pattern |
+
 
 ### Massive number of collections
 
