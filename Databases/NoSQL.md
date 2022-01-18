@@ -99,7 +99,10 @@ Though shalt not exceed 50 indexes per collection.
 ### Bloated documents
 
 Thou shalt keep thy documents small. Wiredtiger (the MongoDB storage engine) caches indexes and frequently used documents.
-If your documents are too big, they wont all fit in the cache and slow disk access is necessary. Wiredtiger's `cache size = max((totalRAM - 1GB) * 0.5, 256MB)`.
+If your documents are too big, they wont all fit in the cache and slow disk access is necessary. Wiredtiger's
+```javascript
+cache size = max((totalRAM - 1GB) * 0.5, 256MB)
+```.
 
 #### Problems
 - slow queries: 
