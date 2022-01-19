@@ -43,7 +43,16 @@
 
 ## Design Patterns
 
-[Further reading](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+### Polymorphic Pattern
+
+Keeping documents in a collection wich are similar but not identical.
+
+- grouping documents into collections based on access/queries increases performance
+- good for merging heterogenous data sources, eg. in Single View Applications
+
+### Attribute Pattern
+
+
 
 
 ### Outlier Pattern
@@ -53,7 +62,6 @@ If you have a One to too Many relationship that needs to be stored as **One --> 
 ### Extended Reference Pattern
 
 Duplicate some but not all of the data you are querying for to avoid expensive $lookups. Only duplicate the part that is frequently accessed together.
-
 
 ## Anti Patterns (MongoDB)
 
@@ -158,4 +166,5 @@ Pick Cloud Firestore otherwise
 
 ## References
 
+- [Schema Design Patterns](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
 - [Schema Design Anti-Patterns](https://www.youtube.com/watch?v=8CZs-0it9r4)
