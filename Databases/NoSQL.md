@@ -68,6 +68,13 @@ Often applied when working with time series data. The idea is to bucket the data
 Outlier can pose problems especially in terms of performance. But changing our entire schema only to deal with those outliers is undesirable. The Outlier Pattern tries to address this problem.
 If you have a One to too Many relationship that needs to be stored as **One --> Too Many** create overflow Documents (use the same id with an incrementing postfix). Indicate in your original and overflow documents whether there are extra entries (via some boolean key-value pair).
 
+### Computed Pattern
+The Computed Pattern addresses the problem of constantly recalculating values in read heavy scenarios.
+
+You can
+- calculate computations on write, or in intervals and use the precomputed value, instead of computing on read.
+- compute on read and save the computed value, maybe with a timestamp, to judge wether it must be recomputed.
+
 ### Extended Reference Pattern
 
 Duplicate some but not all of the data you are querying for to avoid expensive $lookups. Only duplicate the part that is frequently accessed together.
