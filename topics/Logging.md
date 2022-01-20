@@ -1,5 +1,9 @@
 # Logging
 
+Things to keep in mind
+
+- Remember the reader
+- No sensitive data
 - What is the **context**?
 - What is the **purpose**?
   - Debugging
