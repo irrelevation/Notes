@@ -52,11 +52,20 @@ Keeping documents in a collection wich are similar but not identical.
 
 ### Attribute Pattern
 
+Use it when
+- a document has similar fields we want to query together 
+- only a small number of documents has the field we want to query
 
+Under those circumstances you would usually need to build a lot of indexes wich is bad for (write) performance and we'd have to write clunky queries. 
+Grouping the fields by their common attributes solves this problem.
 
+### Bucket Pattern
+
+Often applied when working with time series data. The idea is to bucket the data (usually by timespan) and add some aggregation metrics (eg average/sum of measurements) to each bucket. This will reduce index size and let's you use pre-aggregated data directly and write simpler queries. If you are doing a lot of range queries and calculate aggregated metrics, give bucketing a try.
 
 ### Outlier Pattern
 
+Outlier can pose problems especially in terms of performance. But changing our entire schema only to deal with those outliers is undesirable. The Outlier Pattern tries to address this problem.
 If you have a One to too Many relationship that needs to be stored as **One --> Too Many** create overflow Documents (use the same id with an incrementing postfix). Indicate in your original and overflow documents whether there are extra entries (via some boolean key-value pair).
 
 ### Extended Reference Pattern
