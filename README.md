@@ -7,6 +7,5 @@
    - [Fetch API](topics/JavaScript/Fetch%20API.md)
 3. [Git](topics/git.md)
 4. [GraphQL](topics/GraphQL.md)
-5. [Interviews](topics/Interviews.md)
-6. [Tools](topics/Tools.md)
-7. [Computer Science Topics (yet to be covered)](topics/topics.md)
+5. [Tools](topics/Tools.md)
+6. [Computer Science Topics (yet to be covered)](topics/topics.md)
