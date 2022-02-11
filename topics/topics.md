@@ -37,6 +37,7 @@
 - Aspect Processing
 - Encryption and Cyphers
 - Hash functions and their time space complexities, know when to use them
+  - Take a look at Sha and Md5 and their design decisions
 - Concurrent Processing, Threads and Locking
 - Lambdas
 - Code Review
