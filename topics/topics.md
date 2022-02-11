@@ -177,14 +177,6 @@
     - tkinter (a little older than pyQT5, less capabilities but easier to use)
   - pygame (lightweight game engine, not too powerfull but nice for getting started)
 
-## Javascript / Typescript
-
-- DOM Tree
-- Meteor
-- React/Redux
-- Webpack
-- see everything in Python
-
 ## Browsers
 
 - [The Console API](https://developer.mozilla.org/en-US/docs/Web/API/console)
