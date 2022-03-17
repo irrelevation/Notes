@@ -36,3 +36,8 @@ You don't have to refactor the whole thing, but leave it better than you found i
 8. **Split Phase**
    - Produce a data structure
    - Do something with the data structure
+
+## References
+
+- [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html) by Martin Fowler, with Kent Beck (2018)
+- [Software Design in the 21st Century](https://www.youtube.com/watch?v=6wDoopbtEqk) by Martin Fowler
