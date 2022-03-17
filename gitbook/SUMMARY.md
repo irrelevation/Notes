@@ -1,6 +1,6 @@
 # Table of contents
 
-- [Notes](README.md)
+- [Introduction](README.md)
 - [CS Concepts](cs-concepts/README.md)
   - [Alerts](cs-concepts/alerts.md)
   - [Normalization](cs-concepts/database-normalization.md)
@@ -17,9 +17,9 @@
     - [Web Security](cs-concepts/the-web/web-security.md)
 - [Languages](languages/README.md)
   - [JavaScript](languages/javascript/README.md)
-    - [JavaScript Basics](languages/javascript/basics.md)
-    - [JavaScript Events](languages/javascript/events.md)
-    - [JavaScript Execution Contexts](languages/javascript/execution-contexts.md)
+    - [Basics](languages/javascript/basics.md)
+    - [Events](languages/javascript/events.md)
+    - [Execution Contexts](languages/javascript/execution-contexts.md)
   - [GraphQL](languages/graphql.md)
 - [Tools & Frameworks](tools-and-frameworks/README.md)
   - [Git](tools-and-frameworks/git.md)
