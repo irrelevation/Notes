@@ -1,3 +1,4 @@
-# Notes
+# README
 
-My personal notes, mostly on Computer Science and programming topics.
+This repository contains my personal notes.
+It feeds the gitbook located [here]()
