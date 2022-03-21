@@ -57,9 +57,9 @@ Set data structures support **intrinsic** operations that maintain, query, and m
 based on what the items are, i.e., based on the **unique key** associated with each item.
 
 | Data Structure |   `build(X)`    |    `find(x)`    | `insert/delete(x)` | `find_min/max()` | `find_prev/next(x)` |
-| :------------- | :-------------: | :-------------: | :----------------: | :--------------: | :-----------------: | ----- |
+| :------------- | :-------------: | :-------------: | :----------------: | :--------------: | :-----------------: |
 | Array          |        n        |        n        |         n          |        n         |          n          |
-| Sorted Array   |        n        |      log n      |       log n        |        n         |          1          | log n |
+| Sorted Array   |        n        |      log n      |         n          |        1         |        log n        |
 | Direct Access  |        u        |        1        |         1          |        u         |          u          |
 | Hash Table     | n<sub>(e)</sub> | 1<sub>(e)</sub> | 1<sub>(a)(e)</sub> |        n         |          n          |
 | Set AVL        |     n log n     |      log n      |       log n        |      log n       |        log n        |
