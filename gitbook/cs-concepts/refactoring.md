@@ -17,25 +17,38 @@ You don't have to refactor the whole thing, but leave it better than you found i
 
 ## Types of refactoring
 
-1. **Extract Function**
-   - Put the block of code in a function. A function seperates your _intention_ from your _implementation_.
-     Make shure to pass in any state needed of the context it was extracted from as parameters.
-     Make shure to return any state needed in the code it was extracted from.
-2. **Rename Variable**
-3. **Inline Variable**
-4. **Replace Temp with Query**
-   - Extract Function
-   - Inline Variable
-   - Replacing the variable assignment with a query often allows you to pass less variables/state into functions.
-5. **Change Function Declaration**
-   - change parameters, often enabled by replacing a temporary variable with a query (4)
-6. **Split Loop**
-   - Split loops that are doing **more than one thing** into different loops. You will duplicate the looping logic. If you are worried about performance implications then _test_ the performance!
-7. **Slide Statements**
-   - Change the position of a statement (especially variable assignment) so it is next to the code it logically belongs to.
-8. **Split Phase**
-   - Produce a data structure
-   - Do something with the data structure
+### Extract Function
+
+- Put the block of code in a function. A function seperates your _intention_ from your _implementation_.
+  Make shure to pass in any state needed of the context it was extracted from as parameters.
+  Make shure to return any state needed in the code it was extracted from.
+
+### Rename Variable
+
+### Inline Variable
+
+### Replace Temp with Query
+
+- Extract Function
+- Inline Variable
+- Replacing the variable assignment with a query often allows you to pass less variables/state into functions.
+
+### Change Function Declaration
+
+- change parameters, often enabled by replacing a temporary variable with a query (4)
+
+### Split Loop
+
+- Split loops that are doing **more than one thing** into different loops. You will duplicate the looping logic. If you are worried about performance implications then _test_ the performance!
+
+### Slide Statements
+
+- Change the position of a statement (especially variable assignment) so it is next to the code it logically belongs to.
+
+### Split Phase
+
+- Produce a data structure
+- Do something with the data structure
 
 ## References
 
