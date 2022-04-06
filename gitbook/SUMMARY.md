@@ -4,6 +4,7 @@
 - [CS Concepts](cs-concepts/README.md)
   - [Alerts](cs-concepts/alerts.md)
   - [Algorithms & Data Structures](cs-concepts/algorithms-and-data-structures.md)
+  - [Code Review](cs-concepts/code-review.md)
   - [Database Normalization](cs-concepts/database-normalization.md)
   - [DevOps](cs-concepts/devops.md)
   - [Dynamic Programming](cs-concepts/dynamic-programming.md)
