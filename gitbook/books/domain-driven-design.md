@@ -42,7 +42,8 @@ If an objects name contains "manager" or "service" you are probably dealing with
 
 ### Modules
 
-Modules aim to reduce cognitive load by bundling code with high cohesion and seperating code with low coupling.
+Modules are the chapters of your system's story.
+They aim to reduce cognitive load by bundling code with high cohesion (technical _& conceptual_) and seperating code with low cognitive coupling (technical _& conceptual_).
 We should refactor modules just like we do with code to adapt to changes in the model.
 
 > Like everything else in domain-driven design, MODULES are a _communications mechanism_.
