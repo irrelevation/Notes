@@ -40,6 +40,13 @@ Services are defined by their actions.
 They **are stateless**, i.e. instance of a service don't change their behaviour over time and different instances behave identical.
 If an objects name contains "manager" or "service" you are probably dealing with a service.
 
+### Modules
+
+Modules aim to reduce cognitive load by bundling code with high cohesion and seperating code with low coupling.
+We should refactor modules just like we do with code to adapt to changes in the model.
+
+> Like everything else in domain-driven design, MODULES are a _communications mechanism_.
+
 ## Citation
 
 Evans, E. (2004). Domain-driven design: Tackling complexity in the heart of software. Boston: Addison-Wesley.
