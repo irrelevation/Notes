@@ -48,6 +48,22 @@ We should refactor modules just like we do with code to adapt to changes in the 
 
 > Like everything else in domain-driven design, MODULES are a _communications mechanism_.
 
+### Domain Object Life Cycle
+
+#### Aggregates
+
+Aggregates group objects to enforce invariants and consistency. Each aggregate has a **root**, i.e. an [entity](#entities) that you can reference to use the aggregate and it's constituents. You are not allowed to hold reference to the parts itself.
+
+#### Factories
+
+Factories enforce the invariants of object/aggregate creation and reconstitution.
+They abstract complex object/aggregate creation and decouple it from those objects/aggregates and their clients.
+
+#### Repositories
+
+Repositories handle transition of objects/aggregates to and from **storage**.
+They encapsulate the technology of data storage, retrieval and query, allowing us to deal with concepts of the domain model rather than the underlying infrastructure.
+
 ## Citation
 
 Evans, E. (2004). Domain-driven design: Tackling complexity in the heart of software. Boston: Addison-Wesley.
