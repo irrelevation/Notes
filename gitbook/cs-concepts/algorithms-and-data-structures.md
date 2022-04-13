@@ -85,7 +85,7 @@ A Priority Queue augmented with a method to find an item and change it's priorit
 | Binary Heap    |     n      | log n<sub>(a)</sub> |               log n               |             \|E\| log \|V\|              |
 | Fibonacci Heap |     n      | log n<sub>(a)</sub> |          1<sub>(a)</sub>          |         \|E\| + \|V\| log \|V\|          |
 
-Implementations are ordere in order of difficulty of implementation. So if you know your graph ist sparse (`E = O(|V|)`) choose the Binary Heap implementation. If you know your graph is dense (`E = O(|V|<sup>2</sup>)`) choose the Array implementation. Choose the Fibonacci Heap implementation otherwise for best runtimes.
+Implementations are ordered in order of difficulty of implementation. So if you know your graph ist sparse (`E = O(|V|)`) choose the Binary Heap implementation. If you know your graph is dense (`E = O(|V|<sup>2</sup>)`) choose the Array implementation. Choose the Fibonacci Heap implementation otherwise for best runtimes.
 
 ## Trees
 
