@@ -1,6 +1,6 @@
 # Domain Driven Design
 
-Excellent book centering around the thesis that the way we analyse and design software systems should be guided by a **[common language](#ubiquitous-language)**.
+Excellent book centering around the thesis that designing, writing and analysing software should be an iterative process in wich a **[common language](#ubiquitous-language)**, a [model](#the-model) and the softweare itself mutually refine each other.
 
 ## Ubiquitous Language
 
@@ -8,7 +8,7 @@ A language that is developed and shared by all stakeholders. It is used to creat
 
 ## The Model
 
-The model should model those aspects of our domain that are necessary to solve the problem and leave out those that are not.
+The model should make those aspects of our domain explicit that are necessary to solve the problem and leave out those that are not.
 The model must be coupled to it's implementation.
 Developing the model is an iterative Process. The implementation will influence the model and vice versa.
 
@@ -63,6 +63,21 @@ They abstract complex object/aggregate creation and decouple it from those objec
 
 Repositories handle transition of objects/aggregates to and from **storage**.
 They encapsulate the technology of data storage, retrieval and query, allowing us to deal with concepts of the domain model rather than the underlying infrastructure.
+
+### Other Domain Concepts
+
+#### Constraints
+
+Make constrains explicit. If all data needed to evaluate the constraint resides in an object, make the constraint a method of that object. Otherwise seperate it into it's own object.
+
+#### Processes
+
+Make processes explicit only if the play an explicit role in the domain, not just because they are a byproduct.
+Focusing on the aims rather than the _how_.
+If you need to make them first class citizens of your model, they should be properly abstracted.
+They can be expressed in [services](#services) or **strategies**.
+
+#### Specification
 
 ## Citation
 
