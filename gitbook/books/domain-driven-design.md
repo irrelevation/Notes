@@ -77,7 +77,11 @@ Focusing on the aims rather than the _how_.
 If you need to make them first class citizens of your model, they should be properly abstracted.
 They can be expressed in [services](#services) or **strategies**.
 
-#### Specification
+#### Specifications
+
+A specification is an object that encapsulates one or more rules.
+It is modeled after a predicate (as in predicate logic).
+It takes one or more objects (depending on the arity of the predicate) and **tests** wether the criteria of the predicate are fulfilled.
 
 ## Citation
 
