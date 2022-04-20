@@ -77,11 +77,20 @@ Focusing on the aims rather than the _how_.
 If you need to make them first class citizens of your model, they should be properly abstracted.
 They can be expressed in [services](#services) or **strategies**.
 
-#### Specifications
+## Design Patterns
+
+### Specifications
 
 A specification is an object that encapsulates one or more rules.
 It is modeled after a predicate (as in predicate logic).
 It takes one or more objects (depending on the arity of the predicate) and **tests** wether the criteria of the predicate are fulfilled.
+
+### Assertions
+
+Seperate queries (pure functions wich return values) from commands (functions wich mutate observable state).
+Make the **side effects** of your commands explicit.
+Use assertions to verify **preconditions**, **invariants** and **post-conditions** (see [design by contract](https://en.wikipedia.org/wiki/Design_by_contract#Bibliography) for more infos).
+If your language doesn't natively support these constructs, use unit tests.
 
 ## Citation
 

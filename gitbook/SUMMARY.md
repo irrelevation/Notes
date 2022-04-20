@@ -30,6 +30,7 @@
   - [Git](tools-and-frameworks/git.md)
   - [React](tools-and-frameworks/react.md)
 - [Books](books/README.md)
+  - [Domain Driven Design (DDD)](books/domain-driven-design.md)
   - [You don't know JS](books/ydkjs.md)
 - [Miscellaneous](miscellaneous/README.md)
   - [Design](miscellaneous/design.md)
