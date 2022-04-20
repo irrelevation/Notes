@@ -90,7 +90,15 @@ It takes one or more objects (depending on the arity of the predicate) and **tes
 Seperate queries (pure functions wich return values) from commands (functions wich mutate observable state).
 Make the **side effects** of your commands explicit.
 Use assertions to verify **preconditions**, **invariants** and **post-conditions** (see [design by contract](https://en.wikipedia.org/wiki/Design_by_contract#Bibliography) for more infos).
-If your language doesn't natively support these constructs, use unit tests.
+If your language doesn't natively support these constructs, use unit tests.^
+
+### Closure Of Operations
+
+> ... an operation whose return type is the same as the type of its argument(s).
+
+If functions and methods are "closed under a type" they have less dependencies.
+They introduce less mental overhead and are easier to reuse and compose.
+An example would be JavaScripts `Array.prototype.filter()` method.
 
 ## Citation
 
