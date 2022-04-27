@@ -100,6 +100,8 @@ If functions and methods are "closed under a type" they have less dependencies.
 They introduce less mental overhead and are easier to reuse and compose.
 An example would be JavaScripts `Array.prototype.filter()` method.
 
+## Analysis Patterns
+
 ## Citation
 
 Evans, E. (2004). Domain-driven design: Tackling complexity in the heart of software. Boston: Addison-Wesley.
