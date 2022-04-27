@@ -1,5 +1,30 @@
 # React
 
+## 5 Steps to create a React UI
+
+1. Break the UI into a **component hierarchy**
+   - Find out how the designer divided up the UI
+   - Identify components in your mockup, draw boxes around them and name them
+   - SOLID principles and other OO guidlines can guide that process
+   - CSS classes and design layers are good starting points too
+2. Build a **static version** in React
+   - Build static components
+   - Pass data via props
+   - Don't use state yet
+   - For simple UIs build top-down, for complex UIs build bottom-up
+3. Identify minimal complete UI **state**
+   - Use state only when necessary
+   - Calculate everything else on demand (don't duplicate state that can be derived)
+   - If it doesn't change, it isn't state.
+   - If it is passed in via props, it isn't state.
+4. Identify where your state should live
+   - Identify all components that render the state
+   - State can usually be put in the closest common ancestor or higher up the component tree
+   - Otherwise you can create a component just to hold the state
+5. Add inverse data flow
+   - identify where your state gets updated
+   - integrate state setter accordingly
+
 ## Props
 
 Props are inputs to react components, passed from a parent to a child compoinent.
@@ -9,7 +34,7 @@ Props are **read only**. Do not modify props!
 ## State
 
 State can be be accessed and set via `useState(initialValue)`
-For a particular piece of data there should only be _one_ component that owns it in its state.
+For a particular piece of data there should only be _one_ component that owns it.
 If you need to synchronize between components, make the closest common ancestor the owner and pass it down as props.
 
 ## Side effects
@@ -19,7 +44,7 @@ By default `useEffect` runs after the initial render _and_ after each update.
 
 ## Events
 
-In React u generally don't call `addEventListener`, you just provide a listener, when the element is initially rendered.
+In React you generally don't call `addEventListener`, you just provide a listener, when the element is initially rendered.
 
 ## Keys
 
