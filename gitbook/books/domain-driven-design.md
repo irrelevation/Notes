@@ -102,6 +102,34 @@ An example would be JavaScripts `Array.prototype.filter()` method.
 
 ## Analysis Patterns
 
+## Bounded Contexts
+
+A domain model is only valid within a bounded context.
+Ideally you want to maintain a single domain model shared by everyone.
+But that is often not possible.
+In case of multiple bounded contexts maintain a **context map**.
+Clearly define the relationship between bounded contexts.
+Bounded contexts often map to teams.
+
+### Shared Kernel
+
+Two bounded contexts share a kernel. They are highly coupled in both directions.
+Frequent integration is key.
+
+### Consumer/Supplier
+
+A (mostly) one way dependency.
+Be mindful of power relationships. Suppliers should serve customers.
+Coordinate in short frequent intervals.
+Clearly define interfaces and create automated acceptance testing to ensure you don't break the consumer.
+
+### Conformist
+
+Adhering to the upstream model simplifies translation.
+It is an option for one way dependencies where the upstream team has no interest in _serving_ the downstream team (eg. large organisations or cross organisation).
+
+## Anticorruption Layer
+
 ## Citation
 
 Evans, E. (2004). Domain-driven design: Tackling complexity in the heart of software. Boston: Addison-Wesley.
