@@ -1,6 +1,6 @@
 # React
 
-## 5 Steps to create a React UI
+## 5 steps to create a React UI
 
 1. Break the UI into a **component hierarchy**
    - Find out how the designer divided up the UI
@@ -25,6 +25,18 @@
    - identify where your state gets updated
    - integrate state setter accordingly
 
+## 3 phases Reacts render cycle
+
+1. **Trigger**
+   - A render gets triggered initially when you call `ReactDOM.render()`.
+   - A re-render gets triggered when states or props change.
+2. **Render**
+   - React renders the component and recursive renders all other components rendered within that component.
+3. **Commit**
+   - React updates the DOM to match the newly rendered output.
+   - React minimizes the amount of channges to reach that state.
+   - If parts of the output do not differ, React will _not_ change the corresponding part of the DOM.
+
 ## Props
 
 Props are inputs to react components, passed from a parent to a child compoinent.
@@ -33,7 +45,10 @@ Props are **read only**. Do not modify props!
 
 ## State
 
-State can be be accessed and set via `useState(initialValue)`
+State can be be accessed and set via the `useState()` hook.
+`useState()` returns a state variable and a setter `[state, setState]`.
+The state variable will persist data between renders.
+The setter changes the data and triggers a re-render.
 For a particular piece of data there should only be _one_ component that owns it.
 If you need to synchronize between components, make the closest common ancestor the owner and pass it down as props.
 
@@ -57,7 +72,7 @@ Keys don't get passed as props, i.e. you can't access `props.key`. If you need y
 
 To access a context you can use `useContext(context)`
 
-## Lifecycle
+## Component Lifecycle
 
 There are different stages in the lifecycle of a component:
 
@@ -67,6 +82,7 @@ There are different stages in the lifecycle of a component:
 
 ## Hooks
 
+Hooks need to maintain order between renders.
 Only call Hooks at the **top level** of React _function_ components or in your own custom Hooks.
 
 ## Context
