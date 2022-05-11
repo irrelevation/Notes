@@ -82,8 +82,8 @@ There are different stages in the lifecycle of a component:
 
 During mounting a component's state gets initialised.
 When a component unmounts its state gets freed for garbage collection.
-A components identity is determined via its position in Reacts virtual DOM.
-That means if you conditionally wrap a component in an element (eg. a div) React will actually delete the old component and create a new component.
+A components identity is determined via the structure of the elements it returns.
+That means if you conditionally wrap a components output in an element (eg. a div) React will actually delete the old component and create a new component.
 
 ## Hooks
 
