@@ -80,10 +80,10 @@ There are different stages in the lifecycle of a component:
 - **Update** - when the component gets updates
 - **Unmounting** - when the component gets removed from the DOM
 
-During mounting a component's state gets initialised.
-When a component unmounts its state gets freed for garbage collection.
-A components identity is determined via the structure of the elements it returns.
-That means if you conditionally wrap a components output in an element (eg. a div) React will actually delete the old component and create a new component.
+When a component unmounts the allocated memory gets freed for garbage collection and its state is lost.
+A components identity is determined via its position in the DOM and the reference of the function (or class) that created it.
+That means if you conditionally render a component with a wrapper element (eg. a div) React will actually delete the old component and create a new component.
+It also means you should never define a component inside another component. In that case the function ref will change whenever the parent component rerenders. React will unmount the old component and mount a new component. It's state will be lost.
 
 ## Hooks
 
