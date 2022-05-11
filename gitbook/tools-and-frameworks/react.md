@@ -25,7 +25,7 @@
    - identify where your state gets updated
    - integrate state setter accordingly
 
-## 3 phases Reacts render cycle
+## 3 phases of Reacts render cycle
 
 1. **Trigger**
    - A render gets triggered initially when you call `ReactDOM.render()`.
