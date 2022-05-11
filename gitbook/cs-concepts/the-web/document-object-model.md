@@ -47,7 +47,7 @@ The DOM is a tree data structure. It consists of nodes. There are different type
 ## Shadow DOM
 
 > Shadow DOM allows hidden DOM trees to be attached to elements in the regular DOM tree
-> -- <cite>[MDN][1]</cite>
+> <cite>[MDN][1]</cite>
 
 The Shadow DOM provides encapsulation.
 It allows you to render a tree without exposing it in the DOM.

@@ -80,6 +80,11 @@ There are different stages in the lifecycle of a component:
 - **Update** - when the component gets updates
 - **Unmounting** - when the component gets removed from the DOM
 
+During mounting a component's state gets initialised.
+When a component unmounts its state gets freed for garbage collection.
+A components identity is determined via its position in Reacts virtual DOM.
+That means if you conditionally wrap a component in an element (eg. a div) React will actually delete the old component and create a new component.
+
 ## Hooks
 
 Hooks need to maintain order between renders.
