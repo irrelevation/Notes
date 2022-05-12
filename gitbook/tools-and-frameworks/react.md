@@ -92,7 +92,8 @@ Only call Hooks at the **top level** of React _function_ components or in your o
 
 ## Context
 
-Use context to share data that can be considered "global" for a tree of React components (eg. theme, authenticated user, language, cache)
+Use context to share data that can be considered "global" for a tree of React components (eg. theme, authenticated user, language, cache).
+Create a provider component and a custom hook to use the provided data.
 
 ## Reducers
 
