@@ -96,8 +96,17 @@ Use context to share data that can be considered "global" for a tree of React co
 
 ## Reducers
 
-An alternative to `use state`. Usually used with complex state logic like multiple sub-values or when the next state depends on the previous one.
-Accepts a reducer of type `(state, action) => newState`, returns the current state paired with a dispatch method.
+`useReducer(reducer, initialState)` is an alternative to `useState()`.
+Reducers are usually used with complex state logic like multiple sub-values or when the next state depends on the previous one.
+`useReducer(reducer, initialState)` accepts a reducer of type `(state, action) => newState` and returns the current state paired with a dispatch method.
+
+Keep your reducers pure:
+
+- no side effects, like timeouts, requests, etc.
+- no mutation
+- same inputs, same outputs
+
+Define one action per interaction, even if the action changes multiple things.
 
 ## Refs
 
