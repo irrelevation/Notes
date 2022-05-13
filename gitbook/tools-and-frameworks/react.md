@@ -111,7 +111,19 @@ Define one action per interaction, even if the action changes multiple things.
 
 ## Refs
 
-You can get a ref to an element via `useRef()`.
+Use a ref if you want to remember state between re-renders but don't want to trigger a re-render when the ref changes.
+You can get a ref to an element via `useRef(initialValue)`.
+You can access the value via `ref.current`.
+Unlike state you can mutate refs.
+
+### Use Cases
+
+- Storing timeout IDs
+- Storing and manipulating DOM elements like
+- Using Browser APIs that are not exposed by React, e.g.
+   - focusing
+   - scrolling
+- Storing objects that are not necessary for rendering
 
 ## Nesting Components
 
