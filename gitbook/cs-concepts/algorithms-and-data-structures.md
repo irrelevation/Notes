@@ -38,6 +38,53 @@ see [Binary Heaps Lecture](https://www.youtube.com/watch?v=Xnpo1atN-Iw)
 
 implicit (no pointers, just an array) vs explicit
 
+## Trees
+
+- Binary Search Tree / Set Binary Tree
+- [Binary Space Partitioning Tree](https://en.wikipedia.org/wiki/Binary_space_partitioning)
+- [Spanning Tree](https://en.wikipedia.org/wiki/Spanning_tree)
+- [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree)
+- Trie
+- [Suffix Tree](https://en.wikipedia.org/wiki/Suffix_tree)
+- Red Black Tree
+
+### self balancing Trees
+
+- AVL
+  - Set AVL
+  - Sequence AVL
+
+### M-way Search Tree
+
+In an M-way Search Tree every node can have up to `m` children and `m - 1` keys. A Binary Search Tree is a 2-way Search Tree.
+
+### B-Trees
+
+B-Trees are balanced M-way Search Trees. They are used to implement multi level indexes. They have 3 rules to enforce balance:
+
+1. Every non-leaf node (except root) has at least ⌈m/2⌉ child nodes.
+2. The root has at least two children if it is not a leaf node.
+3. All leaves appear in the same level.
+
+#### Creation & Insertion
+
+B-Trees are created bottom-up. For each key you want to add to the tree:
+
+1. Search the tree & find the node to insert it to
+2. Insert the key.
+3. If the node has more than `m - 1` keys now, rebalance the tree
+
+#### Rebalancing
+
+If by inserting a new key, a node would contain more than `m - 1` keys:
+
+1. Split the node in left half, pivot, and right half.
+2. Add the pivot to the parent node and the left and right split as its left and right children accordingly.
+
+### B+-Trees
+
+Are B-Trees, where only leaf nodes have record pointers. All keys of non-leaf nodes are duplicated in a leaf node. All Leaf nodes are connected as a doubly linked list. This allows iterating over the whole index without having to traverse the entire tree.
+
 ## Interfaces
 
 ### Sequence
@@ -86,22 +133,6 @@ A Priority Queue augmented with a method to find an item and change it's priorit
 | Fibonacci Heap |     n      | log n<sub>(a)</sub> |          1<sub>(a)</sub>          |         \|E\| + \|V\| log \|V\|          |
 
 Implementations are ordered in order of difficulty of implementation. So if you know your graph ist sparse (`E = O(|V|)`) choose the Binary Heap implementation. If you know your graph is dense (`E = O(|V|<sup>2</sup>)`) choose the Array implementation. Choose the Fibonacci Heap implementation otherwise for best runtimes.
-
-## Trees
-
-- Binary Search Tree / Set Binary Tree
-- [Binary Space Partitioning Tree](https://en.wikipedia.org/wiki/Binary_space_partitioning)
-- [Spanning Tree](https://en.wikipedia.org/wiki/Spanning_tree)
-- [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree)
-- Trie
-- [Suffix Tree](https://en.wikipedia.org/wiki/Suffix_tree)
-- Red Black Tree
-
-### self balancing Trees
-
-- AVL
-  - Set AVL
-  - Sequence AVL
 
 ## Heaps
 
