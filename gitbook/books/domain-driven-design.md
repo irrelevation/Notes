@@ -27,7 +27,7 @@ Identity is usually implemented via IDs.
 
 > These are the objects that describe things.
 
-Value o bjects are identified by their qualia.
+Value objects are identified by their qualia.
 We care about them because of _what_ they are.
 Value objects can be shared either by making them immutable and sharing the reference or by sharing a copy.
 What is a value object in one context can be an entity in another.
