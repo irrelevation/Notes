@@ -21,7 +21,7 @@ Things to keep in mind
 | --- | --- | --- | --- | --- |
 | Tracing | Debugging | How'd we get here? | State Changes | Devs |
 | Event | Analytics | What's happening? | Actions & Exceptions | Admins / Product Owners / Devs |
-| Progess | UX | Are You OK? | Percentage / Errors | Users |
+| Progress | UX | Are You OK? | Percentage / Errors | Users |
 | Audit | Verification | Are You Lying? | Summaries, Double-entry book keeping | Compliance, Gov, Business |
 
 ## References
